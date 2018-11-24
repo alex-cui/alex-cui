@@ -1,0 +1,14 @@
+#intro {
+    font-size:100px;
+    position:relative;
+    top:100px;
+    left:100px;
+}
+
+#me {
+    height:500px;
+    width:400px;
+    position:fixed;
+    top:52%;
+    left:50%;
+}
