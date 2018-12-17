@@ -1,2 +1,0 @@
-# alex-cui
-personal website
