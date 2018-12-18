@@ -1,2 +1,6 @@
 # alex-cui
-personal website
+
+ye-inspired personal website
+
+To do:
+    none
