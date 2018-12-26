@@ -3,41 +3,43 @@
     src:url(fonts/YungJakesNewHandwriting-Regular.ttf)
 }
 
-@keyframes background {
-  0% {
-    background-image: url("images/ye.png");
-  }
-  50% {
-    background-image: url("images/ye.png");
-  }
-  100 {
-    background-image: url("images/ye.png");
-  }
-}
-
 body {
     height:100%;
     width:100%;
     
     font-family:ye;
     color:#1EF246;
-    
-    animation-name: background;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
 }
 
 
 
 /*---Id's---*/
+#contact {
+    position:relative;
+    top:50px;
+}
+
 #intro {
     font-size:50px;
     text-align: center;
     position:absolute;
     top:20%;    
-    z-index:-1;
 }
 
+#github {
+    border-right:5px solid white;
+    padding-right:50px;
+}
+
+#linkedin {
+    border-right:5px solid white;
+    padding-left:50px;
+    padding-right:50px;
+}
+
+#email {
+    padding-left:50px;
+}
 
 
 /*---Classes---*/
