@@ -14,9 +14,19 @@ body {
 
 
 /*---Id's---*/
-#contact {
+#contacts {
     position:relative;
     top:50px;
+    z-index:2;
+}
+
+#email {
+    padding-left:50px;
+}
+
+#github {
+    border-right:5px solid white;
+    padding-right:50px;
 }
 
 #intro {
@@ -26,20 +36,12 @@ body {
     top:20%;    
 }
 
-#github {
-    border-right:5px solid white;
-    padding-right:50px;
-}
-
 #linkedin {
     border-right:5px solid white;
     padding-left:50px;
     padding-right:50px;
 }
 
-#email {
-    padding-left:50px;
-}
 
 
 /*---Classes---*/
