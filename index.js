@@ -6,7 +6,7 @@
         window.setTimeout(callback, 1000 / 60);
     };
     window.requestAnimationFrame = requestAnimationFrame;
-})();
+})()
 
 var flakes = [],
     canvas = document.getElementById("canvas"),
@@ -65,10 +65,13 @@ function snow() {
 
         ctx.beginPath();
         ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2);
-        ctx.fill();
+        ctx.fill();        
     }
     requestAnimationFrame(snow);
-};
+    
+    
+
+}
 
 function reset(flake) {
     flake.x = Math.floor(Math.random() * canvas.width);
@@ -102,7 +105,7 @@ function init() {
     }
 
     snow();
-};
+}
 
 window.addEventListener("resize",function(){
     canvas.width = window.innerWidth;
