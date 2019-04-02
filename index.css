@@ -4,8 +4,8 @@
 }
 
 body {
-    height:100%;
-    width:100%;
+    /* The image used */
+    background-image: url("images/ye.png");
     
     font-family:ye;
     color:#1EF246;
@@ -24,10 +24,6 @@ body {
                0 20px 20px rgba(0,0,0,.15);
 }
 
-span {
-    font-size:70px;
-}
-
 
 
 /*---Id's---*/
@@ -37,8 +33,18 @@ span {
     z-index:2;
 }
 
+#date {
+    position:absolute;
+    top:95%;
+    left:85%;
+}
+
 #email {
     padding-left:50px;
+}
+
+#intro {
+    font-size:50px;
 }
 
 #github {
@@ -46,13 +52,14 @@ span {
     padding-right:50px;
 }
 
-#intro {
-    font-size:50px;
+#summary {
+    font-size:45px;
     text-align: center;
     position:absolute;
     top:5%;
-    left:5%;
-    right:5%;
+    left:20%;
+    right:20%;
+    
 }
 
 #linkedin {
@@ -71,12 +78,6 @@ span {
 
 /*---Classes---*/
 .parallax { 
-    /* The image used */
-    background-image: url("images/ye.png");
-    
-    height:100%;
-    width:100%;
-
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
