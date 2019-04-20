@@ -27,10 +27,9 @@ body {
 
 .jumbotron {
     color:black;
-    height:550px;
-    width:625px;
+    width:50%;
     position:relative;
     top:100px;
-    left:28%;
+    left:25%;
     opacity: .9;
 }
