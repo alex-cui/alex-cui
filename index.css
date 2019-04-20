@@ -6,8 +6,7 @@
 body {
     background:black;
     color:white;
-    font-family: 'Montserrat', sans-serif;
-
+    font-family:'Montserrat', sans-serif;
 }
 
 
@@ -27,9 +26,9 @@ body {
 
 .jumbotron {
     color:black;
+    position:fixed;
     width:50%;
-    position:relative;
-    top:100px;
+    top:15%;
     left:25%;
     opacity: .9;
 }
