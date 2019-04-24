@@ -7,6 +7,9 @@ body {
     background:black;
     color:white;
     font-family:'Montserrat', sans-serif;
+    height:100%;
+    width:100%;
+
 }
 
 #date {
@@ -28,10 +31,10 @@ body {
     font-family:'Montserrat', sans-serif;
     color:black;
     background-color:#e1e3ea;
-    position:fixed;
+    position:relative;
     width:40%;
-    min-height:80%;
-    top:10%;
+    height:80%;
+    top:5vh;
     left:30%;
     right:30%;
     opacity: .9;
