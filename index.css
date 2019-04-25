@@ -8,7 +8,7 @@ body {
     float:right;
     font-size:8px;
     position:relative;
-    bottom:10px;    
+    bottom:-10px;    
 }
 
 #myVideo {
@@ -25,17 +25,18 @@ body {
     background-color:#e1e3ea;
     position:relative;
     width:40%;
-    height:80%;
-    top:8.5vh;
+    height:20%;
+    top:7.5vh;
     left:30%;
     right:30%;
-    opacity: .9;
+    opacity:.9;
 }
 
 .link {
     border-radius:100%;        
-    display:inline-block;
     width:100px;
+    position:relative;
+/*    left:8%;*/
 }
 
 img {
