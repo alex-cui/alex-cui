@@ -1,7 +1,6 @@
 body {
     background:black;
     font-family:'Montserrat', sans-serif;
-    text-align: center;
 }
 
 #date {
@@ -14,6 +13,10 @@ body {
 
 #myVideo {
     position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
     height:100%;
     width:100%;
 }
@@ -22,12 +25,10 @@ body {
     font-family:'Montserrat', sans-serif;
     background-color:#e1e3ea;
     position:absolute;
-    top:10%;
+    top:7.5%;
     width:40%;
     left:30%;
     opacity:.9;
-/*   vertical-align: middle;*/
-    text-align: center
 }
 
 .link {
