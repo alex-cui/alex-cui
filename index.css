@@ -11,6 +11,7 @@ body {
 }
 
 #me {
+    float:right;
     height:500px;
     width:500px;
     border-radius:50%;
@@ -18,24 +19,26 @@ body {
 
     border:5px black solid;
     position: relative;
-    display: block;
-    margin: 30% -20%;
+    margin: 10% 10%;
 
     z-index:-1;
 }
 
 .jumbotron {
     font-family:'Montserrat', sans-serif;
-    background-color:WHITE;
-    position:fixed;
-    top:5%;
-    width:40%;
-    left:10%;
-    height:90%;
-    
     border:5px black solid;
-      padding: 50px red solid;
-
+    background-color:white;
+    
+    position:relative;
+    float:left;
+    
+    height:90%;
+    width:40%;
+    
+    top:100px;
+    left:10%;
+    
+    
 }
 
 .link {
