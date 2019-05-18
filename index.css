@@ -1,6 +1,10 @@
 body {
     background:black;
     font-family:'Montserrat', sans-serif;
+    background-image:url("media/wallpaper.jpg");
+
+
+
 }
 
 #date {
