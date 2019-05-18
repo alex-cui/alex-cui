@@ -11,17 +11,17 @@ body {
 }
 
 #me {
-    float:right;
     height:500px;
     width:500px;
     border-radius:50%;
     overflow: hidden;
-
     border:5px black solid;
-    position: relative;
-    margin: 10% 10%;
+    
+    position:absolute;
+    float:right;
 
-    z-index:-1;
+    right:10%;
+    top:20%;
 }
 
 .jumbotron {
@@ -29,13 +29,12 @@ body {
     border:5px black solid;
     background-color:white;
     
-    position:relative;
-    float:left;
+    position:absolute;
     
     height:90%;
     width:40%;
     
-    top:100px;
+    top:50px;
     left:10%;
     
     
