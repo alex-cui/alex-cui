@@ -13,9 +13,10 @@ body {
 #me {
     height:500px;
     width:500px;
-    border-radius:50%;
     overflow: hidden;
     border:5px black solid;
+    border-radius:50%;
+
     
     position:absolute;
     float:right;
