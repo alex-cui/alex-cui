@@ -1,10 +1,12 @@
 body {
-    background:black;
+    background:white;
     font-family:'Montserrat', sans-serif;
+/*
     background-image:url("media/wallpaper.jpg");
 
-
-
+  background-repeat: no-repeat;
+  background-size: contain;
+*/
 }
 
 #date {
@@ -25,14 +27,16 @@ body {
     width:100%;
 }
 
+
 .jumbotron {
     font-family:'Montserrat', sans-serif;
-    background-color:#e1e3ea;
+    background-color:WHITE;
     position:absolute;
     top:7.5%;
     width:40%;
     left:30%;
-    opacity:.9;
+    
+    border:5px black solid;
 }
 
 .link {
