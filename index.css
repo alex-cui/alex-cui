@@ -1,6 +1,7 @@
 body {
     background:white;
     font-family:'Montserrat', sans-serif;
+/*    height:100%; width:100%;*/
 }
 
 #date {
@@ -17,12 +18,11 @@ body {
     border:5px black solid;
     border-radius:50%;
 
-    
-    position:absolute;
-    float:right;
+    position:relative;
+    float:left;
 
-    right:10%;
-    top:20%;
+    top:15vh;
+    left:30vh;
 }
 
 .jumbotron {
@@ -30,15 +30,13 @@ body {
     border:5px black solid;
     background-color:white;
     
-    position:absolute;
+    position:relative;
+    float:left;
     
-    height:90%;
     width:40%;
     
-    top:50px;
-    left:10%;
-    
-    
+    top:5vh;
+    left:15vh;
 }
 
 .link {
