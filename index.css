@@ -14,11 +14,12 @@ body {
     height:500px;
     width:500px;
     border-radius:50%;
+    overflow: hidden;
+
     border:5px black solid;
-    position: absolute;
-    top: 0; bottom:0; left: 0; right:0;
+    position: relative;
     display: block;
-    margin: 10% 60%;
+    margin: 30% -20%;
 
     z-index:-1;
 }
@@ -29,23 +30,20 @@ body {
     position:fixed;
     top:5%;
     width:40%;
-    left:30%;
+    left:10%;
     height:90%;
     
     border:5px black solid;
+      padding: 50px red solid;
+
 }
 
 .link {
     border-radius:100%;
     width:100px;
     position:relative;
-/*    left:8%;*/
 }
 
-img {
-    height:40px;
-    border-radius:50%;
-}
 
 .typewriter {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
