@@ -4,8 +4,7 @@ body {
 }
 
 #me {
-    height:500px;
-    width:500px;
+
     overflow: hidden;
     border:5px black solid;
     border-radius:50%;
@@ -15,6 +14,8 @@ body {
 
     top:17.5vh;
     left:30vh;
+    height:65vh;
+    width:65vh;
 }
 
 .jumbotron {
