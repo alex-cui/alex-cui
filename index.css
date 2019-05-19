@@ -4,13 +4,6 @@ body {
 /*    height:100%; width:100%;*/
 }
 
-#date {
-    float:right;
-    font-size:8px;
-    position:relative;
-    bottom:-10px;    
-}
-
 #me {
     height:500px;
     width:500px;
@@ -33,10 +26,11 @@ body {
     position:relative;
     float:left;
     
+    height:90vh;
     width:40%;
     
     top:5vh;
-    left:15vh;
+    left:20vh;
 }
 
 .link {
@@ -47,6 +41,7 @@ body {
 
 
 .typewriter {
+    text-align:center;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid transparent; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
