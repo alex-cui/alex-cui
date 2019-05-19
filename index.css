@@ -12,10 +12,11 @@ body {
     position:relative;
     float:left;
 
-    top:17.5vh;
-    left:30vh;
-    height:65vh;
-    width:65vh;
+    height:50vh;
+    width:50vh;
+    
+    top:25vh;
+    left:37.5vh;
 }
 
 .jumbotron {
