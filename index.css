@@ -4,7 +4,6 @@ body {
 }
 
 #me {
-
     overflow: hidden;
     border:5px black solid;
     border-radius:50%;
@@ -34,12 +33,32 @@ body {
     left:20vh;
 }
 
+.vl {
+    border-left:5vh solid black;
+    height:100vh;
+    left:50vh;
+    position:absolute;
+}
+
+.v2 {
+    border-left:5vh solid #FF0005;
+    height:100vh;
+    left:130vh;
+    position:absolute;
+}
+
+.v3 {
+      border: 1px solid red;
+    position:absolute;
+    top:-50vh;
+    z-index:10;
+}
+
 .link {
     border-radius:100%;
     width:100px;
     position:relative;
 }
-
 
 .typewriter {
     text-align:center;
