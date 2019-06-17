@@ -8,15 +8,15 @@ body {
 }
 
 .me {
-    overflow: hidden;
-    border:8px black solid;
-    border-radius:50%;
-
     position:relative;
     float:left;
-
+    overflow: hidden;
+    
     height:50vh;
     width:50vh;
+    
+    border:7px black solid;
+    border-radius:50%;
     
     top:25vh;
     left:37.5vh;
@@ -36,7 +36,7 @@ body {
 
 .jumbotron {
     font-family:'Montserrat', sans-serif;
-    border:8px black solid;
+    border:5px black solid;
     background-color:white;
     
     position:relative;
