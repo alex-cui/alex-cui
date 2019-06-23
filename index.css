@@ -3,13 +3,18 @@ body {
     font-family:'Montserrat', sans-serif;
     background-image:url("media/wallpaper.jpg");
     background-repeat: no-repeat;
-    background-size: 70%;
+    background-size: 30%;
 /*    background-position: center;*/
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
-    background-position: center;
-        overflow: hidden;
+    background-position: right;
+      height: 100%;
+
+}
+
+html {
+    height:100%;
 }
 
 .background {
@@ -23,7 +28,6 @@ body {
 .me {    
     height:70%;
     width:70%;
-    
 /*    border:5px black solid;*/
     border-radius:50%;
     margin-left: auto;
@@ -34,17 +38,56 @@ body {
 
 .jumbotron {
     font-family:'Montserrat', sans-serif;
-    background-color:white;
+    background-color:transparent;
     
+    position:relative;
     width:40%;
-    left:30%;
+    left:15%;
     top:10%;
-    
+/*
     margin: auto;
     display: block;
+*/
     
-/*    opacity:.9;*/    
 }
+
+.falling-leaves {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+
+  transform: translate(-50%, 0);
+  border: 20px solid #fff;
+  border-radius: 50px;
+  background: url(http://sarahmhigley.com/static/images/sidebar-bg.png) no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.leaf-scene {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    transform-style: preserve-3d;
+
+
+  }
+
+   .leaf-scene div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background: url(http://sarahmhigley.com/static/images/leaf.svg) no-repeat;
+      background-size: 100%;
+      transform-style: preserve-3d;
+      backface-visibility: visible;
+    }
 
 .link {
     border-radius:100%;
@@ -53,7 +96,6 @@ body {
         overflow: auto;
 
 }
-
 
 .typewriter {
     text-align:center;
