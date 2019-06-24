@@ -167,8 +167,11 @@ var leafContainer = document.querySelector('.falling-leaves'),
 
 var clicked= false;
 
-function rustle() {
     leaves.init();
     leaves.render();
-}
+
+//function rustle() {
+//    leaves.init();
+//    leaves.render();
+//}
 
