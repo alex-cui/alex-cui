@@ -20,17 +20,18 @@ body {
 }
 
 .lead {
-    font-size:50px;
+    font-size:60px;
     margin-bottom:20px;
 }
 
 .description {
-    font-size:17px;
+    font-size:18px;;
     margin-top:40px;
 }
 
 .me-pic {    
-    width:50%;
+    height:60%;
+    width:60%;
     border-radius:50%;
     margin-left: auto;
     margin-right: auto;
@@ -47,7 +48,7 @@ body {
     width:40%;
     left:15%;    
     padding-top:20px;
-    padding-bottom:0px;
+    padding-bottom:20px;
 }
 
 .leaf-scene {
