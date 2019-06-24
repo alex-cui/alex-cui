@@ -47,6 +47,8 @@ body {
     position:relative;
     width:40%;
     left:15%;    
+    padding-top:20px;
+    padding-bottom:20px;
 }
 
 .leaf-scene {
