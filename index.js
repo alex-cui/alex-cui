@@ -1,62 +1,5 @@
 /*eslint-env browser*/
 
-var vid = document.getElementById("myVideo"); 
-
-vid.addEventListener("click",function(event) { 
-    if (vid.paused) {
-        vid.play();
-        vid.style.opacity = "1";
-    }
-    else {
-        vid.pause();
-        vid.style.opacity = ".7";
-    }
-});
-
-// Make the DIV element draggable:
-dragElement(document.getElementById("jumbotron"));
-
-function dragElement(elmnt) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById(elmnt.id + "header")) {
-    // if present, the header is where you move the DIV from:
-    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-  } else {
-    // otherwise, move the DIV from anywhere inside the DIV: 
-    elmnt.onmousedown = dragMouseDown;
-  }
-
-  function dragMouseDown(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // get the mouse cursor position at startup:
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
-  }
-
-  function elementDrag(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // calculate the new cursor position:
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    // set the element's new position:
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-  }
-
-  function closeDragElement() {
-    // stop moving when mouse button is released:
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
-}
-
 var LeafScene = function(el) {
     this.viewport = el;
     this.world = document.createElement('div');
@@ -162,65 +105,70 @@ var LeafScene = function(el) {
     }
   }
 
-  LeafScene.prototype.init = function() {
+LeafScene.prototype.init = function() {
 
-    for (var i = 0; i < this.options.numLeaves; i++) {
-      var leaf = {
-        el: document.createElement('div'),
-        x: 0,
-        y: 0,
-        z: 0,
-        rotation: {
-          axis: 'X',
-          value: 0,
-          speed: 0,
-          x: 0
-        },
-        xSpeedVariation: 0,
-        ySpeed: 0,
-        path: {
-          type: 1,
-          start: 0,
+for (var i = 0; i < this.options.numLeaves; i++) {
+  var leaf = {
+    el: document.createElement('div'),
+    x: 0,
+    y: 0,
+    z: 0,
+    rotation: {
+      axis: 'X',
+      value: 0,
+      speed: 0,
+      x: 0
+    },
+    xSpeedVariation: 0,
+    ySpeed: 0,
+    path: {
+      type: 1,
+      start: 0,
 
-        },
-        image: 1
-      };
-      this._resetLeaf(leaf);
-      this.leaves.push(leaf);
-      this.world.appendChild(leaf.el);
-    }
+    },
+    image: 1
+  };
+  this._resetLeaf(leaf);
+  this.leaves.push(leaf);
+  this.world.appendChild(leaf.el);
+}
 
-    this.world.className = 'leaf-scene';
-    this.viewport.appendChild(this.world);
+this.world.className = 'leaf-scene';
+this.viewport.appendChild(this.world);
 
-    // set perspective
-    this.world.style.webkitPerspective = "400px";
-    this.world.style.MozPerspective = "400px";
-    this.world.style.oPerspective = "400px";
-    this.world.style.perspective = "400px";
-    
-    // reset window height/width on resize
-    var self = this;
-    window.onresize = function(event) {
-      self.width = self.viewport.offsetWidth;
-      self.height = self.viewport.offsetHeight;
-    };
-  }
+// set perspective
+this.world.style.webkitPerspective = "400px";
+this.world.style.MozPerspective = "400px";
+this.world.style.oPerspective = "400px";
+this.world.style.perspective = "400px";
 
-  LeafScene.prototype.render = function() {
-    this._updateWind();
-    for (var i = 0; i < this.leaves.length; i++) {
-      this._updateLeaf(this.leaves[i]);
-    }
+// reset window height/width on resize
+var self = this;
+window.onresize = function(event) {
+  self.width = self.viewport.offsetWidth;
+  self.height = self.viewport.offsetHeight;
+};
+}
 
-    this.timer++;
+LeafScene.prototype.render = function() {
+this._updateWind();
+for (var i = 0; i < this.leaves.length; i++) {
+  this._updateLeaf(this.leaves[i]);
+}
 
-    requestAnimationFrame(this.render.bind(this));
-  }
+this.timer++;
 
-  // start up leaf scene
-  var leafContainer = document.querySelector('.falling-leaves'),
-      leaves = new LeafScene(leafContainer);
+requestAnimationFrame(this.render.bind(this));
+}
 
-  leaves.init();
-  leaves.render();
+// start up leaf scene
+var leafContainer = document.querySelector('.falling-leaves'),
+  leaves = new LeafScene(leafContainer);
+
+var clicked= false;
+
+function rustle() {
+    leaves.init();
+    leaves.render();
+}
+
