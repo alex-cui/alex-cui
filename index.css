@@ -27,7 +27,42 @@ body {
     
         top:35%;
     right:0;
+        opacity:.7
+
 }
+
+.wallpaper2 {
+    position:fixed;
+    height:60%;
+    top:35%;
+    left:0;
+    
+    opacity:.7
+}
+
+/*
+.wallpaper3 {
+    position:fixed;
+    
+    height:30%;
+    top:0%;
+    left:10%;
+    opacity:.7
+}
+*/
+
+.wallpaper4 {
+    position:fixed;
+
+    height:30%;
+    top:0%;
+    left:10%;
+    bottom:0;
+    opacity:.7
+
+}
+
+
 
 .lead {
     font-size:50px;
