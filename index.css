@@ -1,15 +1,6 @@
 body {
     background:white;
     font-family:'Montserrat', sans-serif;
-/*
-    background-image:url("media/wallpaper.jpg");
-    background-repeat: no-repeat;
-    background-size: 30%;
-    background-position: center;
-
-    background-attachment: fixed;
-    background-position: right;
-*/
 }
 
 .jumbotron {
@@ -19,8 +10,8 @@ body {
 
     position:relative;
     width:40%;
-    left:17%;    
-/*    left:30%;*/
+/*    left:17%;    */
+    left:30%;
     padding-top:2.5%;
     padding-bottom:0;
     margin:0;
@@ -29,8 +20,13 @@ body {
 .wallpaper {
     position:fixed;
     height:30%;
-    right:0;
+/*
     top:35%;
+    right:10%;
+*/
+    
+        top:35%;
+    right:0;
 }
 
 .lead {

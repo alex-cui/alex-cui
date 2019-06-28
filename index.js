@@ -107,71 +107,79 @@ var LeafScene = function(el) {
 
 LeafScene.prototype.init = function() {
 
-for (var i = 0; i < this.options.numLeaves; i++) {
-  var leaf = {
-    el: document.createElement('div'),
-    x: 0,
-    y: 0,
-    z: 0,
-    rotation: {
-      axis: 'X',
-      value: 0,
-      speed: 0,
-      x: 0
-    },
-    xSpeedVariation: 0,
-    ySpeed: 0,
-    path: {
-      type: 1,
-      start: 0,
+    for (var i = 0; i < this.options.numLeaves ; i++) {
+      var leaf = {
+        el: document.createElement('div'),
+        x: 0,
+        y: 0,
+        z: 0,
+        rotation: {
+          axis: 'X',
+          value: 0,
+          speed: 0,
+          x: 0
+        },
+        xSpeedVariation: 0,
+        ySpeed: 0,
+        path: {
+          type: 1,
+          start: 0,
 
-    },
-    image: 1
-  };
-  this._resetLeaf(leaf);
-  this.leaves.push(leaf);
-  this.world.appendChild(leaf.el);
-}
+        },
+        image: 1
+      };
+      this._resetLeaf(leaf);
+      this.leaves.push(leaf);
+      this.world.appendChild(leaf.el);
+    }
 
-this.world.className = 'leaf-scene';
-this.viewport.appendChild(this.world);
+    this.world.className = 'leaf-scene';
+    this.viewport.appendChild(this.world);
 
-// set perspective
-this.world.style.webkitPerspective = "400px";
-this.world.style.MozPerspective = "400px";
-this.world.style.oPerspective = "400px";
-this.world.style.perspective = "400px";
+    // set perspective
+    this.world.style.webkitPerspective = "400px";
+    this.world.style.MozPerspective = "400px";
+    this.world.style.oPerspective = "400px";
+    this.world.style.perspective = "400px";
 
-// reset window height/width on resize
-var self = this;
-window.onresize = function(event) {
-  self.width = self.viewport.offsetWidth;
-  self.height = self.viewport.offsetHeight;
-};
+    // reset window height/width on resize
+    var self = this;
+    window.onresize = function(event) {
+      self.width = self.viewport.offsetWidth;
+      self.height = self.viewport.offsetHeight;
+    };
 }
 
 LeafScene.prototype.render = function() {
-this._updateWind();
-for (var i = 0; i < this.leaves.length; i++) {
-  this._updateLeaf(this.leaves[i]);
-}
+    this._updateWind();
+    for (var i = 0; i < this.leaves.length && !toggle; i++) {
+      this._updateLeaf(this.leaves[i]);
+    }
 
-this.timer++;
+    this.timer++;
 
-requestAnimationFrame(this.render.bind(this));
+    requestAnimationFrame(this.render.bind(this));
 }
 
 // start up leaf scene
 var leafContainer = document.querySelector('.falling-leaves'),
   leaves = new LeafScene(leafContainer);
 
-var clicked= false;
 
-    leaves.init();
-    leaves.render();
+var clicked = false;
+var toggle = false;
 
-//function rustle() {
-//    leaves.init();
-//    leaves.render();
-//}
+function rustle() {
+    if (!clicked) {
+        clicked = true;
+        leaves.init();
+        leaves.render();
+    }
+    else if (toggle) {
+        toggle = false;
+    }
+    else if (!toggle) {
+        toggle = true;
+    }
+}
 
