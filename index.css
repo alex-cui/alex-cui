@@ -20,49 +20,12 @@ body {
 .wallpaper {
     position:fixed;
     height:30%;
-/*
-    top:35%;
-    right:10%;
-*/
     
         top:35%;
     right:0;
         opacity:.7
 
 }
-
-.wallpaper2 {
-    position:fixed;
-    height:60%;
-    top:35%;
-    left:0;
-    
-    opacity:.7
-}
-
-/*
-.wallpaper3 {
-    position:fixed;
-    
-    height:30%;
-    top:0%;
-    left:10%;
-    opacity:.7
-}
-*/
-
-.wallpaper4 {
-    position:fixed;
-
-    height:30%;
-    top:0%;
-    left:10%;
-    bottom:0;
-    opacity:.7
-
-}
-
-
 
 .lead {
     font-size:50px;
@@ -80,6 +43,11 @@ body {
     
     padding-top:5px;
     padding-bottom:0px;
+    transition: transform .2s;   
+}
+
+.me-pic:hover {
+  transform: scale(1.15);
 }
 
 .leaf-scene {
@@ -90,6 +58,7 @@ body {
     width: 100%;
     transform-style: preserve-3d;
     overflow: hidden;
+    z-index:-1;
 }
 
 .leaf-scene div {

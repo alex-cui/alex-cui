@@ -5,16 +5,7 @@ var LeafScene = function(el) {
     this.world = document.createElement('div');
     this.leaves = [];
 
-    this.options = {
-      numLeaves: 20,
-      wind: {
-        magnitude: 1.2,
-        maxSpeed: 12,
-        duration: 300,
-        start: 0,
-        speed: 0
-      },
-    };
+    this.options = {numLeaves: 20};
 
     this.width = this.viewport.offsetWidth;
     this.height = this.viewport.offsetHeight;
@@ -61,9 +52,7 @@ var LeafScene = function(el) {
     }
 
     this._updateLeaf = function(leaf) {
-      var leafWindSpeed = this.options.wind.speed(this.timer - this.options.wind.start, leaf.y);
-
-      var xSpeed = leafWindSpeed + leaf.xSpeedVariation;
+      var xSpeed = leaf.xSpeedVariation;
       leaf.x -= xSpeed;
       leaf.y += leaf.ySpeed;
       leaf.rotation.value += leaf.rotation.speed;
@@ -83,31 +72,10 @@ var LeafScene = function(el) {
       }
     }
 
-    this._updateWind = function() {
-      // wind follows a sine curve: asin(b*time + c) + a
-      // where a = wind magnitude as a function of leaf position, b = wind.duration, c = offset
-      // wind duration should be related to wind magnitude, e.g. higher windspeed means longer gust duration
-
-      if (this.timer === 0 || this.timer > (this.options.wind.start + this.options.wind.duration)) {
-
-        this.options.wind.magnitude = Math.random() * this.options.wind.maxSpeed;
-        this.options.wind.duration = this.options.wind.magnitude * 50 + (Math.random() * 20 - 10);
-        this.options.wind.start = this.timer;
-
-        var screenHeight = this.height;
-
-        this.options.wind.speed = function(t, y) {
-          // should go from full wind speed at the top, to 1/2 speed at the bottom, using leaf Y
-          var a = this.magnitude/2 * (screenHeight - 2*y/3)/screenHeight;
-          return a * Math.sin(2*Math.PI/this.duration * t + (3 * Math.PI/2)) + a;
-        }
-      }
-    }
   }
 
 LeafScene.prototype.init = function() {
-
-    for (var i = 0; i < this.options.numLeaves ; i++) {
+    for (var i = 0; i < this.options.numLeaves && init; i++) {
       var leaf = {
         el: document.createElement('div'),
         x: 0,
@@ -151,8 +119,8 @@ LeafScene.prototype.init = function() {
 }
 
 LeafScene.prototype.render = function() {
-    this._updateWind();
-    for (var i = 0; i < this.leaves.length && !toggle; i++) {
+    for (var i = 0; i < this.leaves.length && init; i++) {
+    
       this._updateLeaf(this.leaves[i]);
     }
 
@@ -165,21 +133,20 @@ LeafScene.prototype.render = function() {
 var leafContainer = document.querySelector('.falling-leaves'),
   leaves = new LeafScene(leafContainer);
 
+var init = true;
 
-var clicked = false;
-var toggle = false;
+leaves.init();
+leaves.render();
 
-function rustle() {
-    if (!clicked) {
-        clicked = true;
-        leaves.init();
-        leaves.render();
+function toggle() {
+    if (init) {
+
+        init = false;
     }
-    else if (toggle) {
-        toggle = false;
+    else {
+        init = true;
     }
-    else if (!toggle) {
-        toggle = true;
-    }
+    
 }
+
 
