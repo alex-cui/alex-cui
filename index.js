@@ -14,7 +14,6 @@ var LeafScene = function(el) {
     this.timer = 0;
 
     this._resetLeaf = function(leaf) {
-        if (init) {
           // place leaf towards the top left
           leaf.x = this.width * 2 - Math.random()*this.width*1.75;
           leaf.y = -10;
@@ -23,7 +22,7 @@ var LeafScene = function(el) {
             leaf.x = this.width + 10;
             leaf.y = Math.random()*this.height/2;
           }
-        }
+        
       // at the start, the leaf can be anywhere
       if (this.timer == 0) {
         leaf.y = this.height;
@@ -117,6 +116,10 @@ LeafScene.prototype.init = function() {
       self.width = self.viewport.offsetWidth;
       self.height = self.viewport.offsetHeight;
     };
+    
+            if (this.timer == 1) {
+            return;
+        }
 }
 
 LeafScene.prototype.render = function() {
@@ -125,27 +128,23 @@ LeafScene.prototype.render = function() {
     }
 
     this.timer++;
-
+    
     requestAnimationFrame(this.render.bind(this));
+    
+        if (this.timer == 1) {
+            return;
+        }
+
 }
 
 // start up leaf scene
 var leafContainer = document.querySelector('.falling-leaves'),
   leaves = new LeafScene(leafContainer);
 
-var init = true;
-
-leaves.init();
-leaves.render();
 
 function toggle() {
-    if (init) {
-        init = false;
-    }
-    else {
-        init = true;
-    }
-    
+    leaves.init();
+    leaves.render();
 }
 
 

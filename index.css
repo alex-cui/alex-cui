@@ -3,6 +3,40 @@ body {
     font-family:'Montserrat', sans-serif;
 }
 
+.navigation {
+    color:blue;
+    text-align:left;
+    position:relative;
+    float:left;
+    width:0px;
+    left:20%;
+/*    border:1px solid black;*/
+}
+
+.green {
+    position:fixed;
+    background-color:#D3CF70;
+    height:50%;
+    width:100%;
+    top:0;
+}
+
+.grey {
+    position:fixed;
+    background-color:#CCC9C0; 
+    height:10%;
+    width:100%;
+    top:50%;
+}
+
+.white {
+    position:fixed;
+    background-color:white;
+    height:40%;
+    width:100%;
+    top:60%;
+}
+
 .jumbotron {
     font-family:'Montserrat', sans-serif;
     background-color:transparent;
