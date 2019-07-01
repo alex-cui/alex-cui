@@ -14,18 +14,19 @@ var LeafScene = function(el) {
     this.timer = 0;
 
     this._resetLeaf = function(leaf) {
-
-      // place leaf towards the top left
-      leaf.x = this.width * 2 - Math.random()*this.width*1.75;
-      leaf.y = -10;
-      leaf.z = Math.random()*200;
-      if (leaf.x > this.width) {
-        leaf.x = this.width + 10;
-        leaf.y = Math.random()*this.height/2;
-      }
+        if (init) {
+          // place leaf towards the top left
+          leaf.x = this.width * 2 - Math.random()*this.width*1.75;
+          leaf.y = -10;
+          leaf.z = Math.random()*200;
+          if (leaf.x > this.width) {
+            leaf.x = this.width + 10;
+            leaf.y = Math.random()*this.height/2;
+          }
+        }
       // at the start, the leaf can be anywhere
       if (this.timer == 0) {
-        leaf.y = Math.random()*this.height;
+        leaf.y = this.height;
       }
 
       // Choose axis of rotation.
@@ -75,7 +76,7 @@ var LeafScene = function(el) {
   }
 
 LeafScene.prototype.init = function() {
-    for (var i = 0; i < this.options.numLeaves && init; i++) {
+    for (var i = 0; i < this.options.numLeaves; i++) {
       var leaf = {
         el: document.createElement('div'),
         x: 0,
@@ -119,8 +120,7 @@ LeafScene.prototype.init = function() {
 }
 
 LeafScene.prototype.render = function() {
-    for (var i = 0; i < this.leaves.length && init; i++) {
-    
+    for (var i = 0; i < this.leaves.length; i++) {
       this._updateLeaf(this.leaves[i]);
     }
 
@@ -140,7 +140,6 @@ leaves.render();
 
 function toggle() {
     if (init) {
-
         init = false;
     }
     else {
