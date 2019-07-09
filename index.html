@@ -33,12 +33,15 @@
         
     </head>
 
-    <body data-spy="scroll" data-target="#nav" data-offset="100">
+    <body data-spy="scroll" data-target="#nav">
 
-        <nav class="navigation" id="nav">
+        <nav id="nav" class="navigation fade-in">
           <ul class="nav nav-pills flex-column">
             <li class="nav-item">
               <a class="nav-link" href="#home">home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">about </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#projects">projects</a>
@@ -50,63 +53,68 @@
         </nav>
            
         <div id="home" class="jumbotron fade-in">
-
-            <div>
-
-                <h1 class="greeting">Hi I'm Alex!</h1>
+            
+            <div class="main">
                 
-                <div>
+                <img class="me-pic view overlay" onclick="toggle()" src="media/me.jpg">
                 
-                    <img class="me-pic view overlay" onclick="toggle()" src="media/me.jpg">
-                    
-                </div>
+                <div class="home-text">
 
-                <p class="description">and I have a passion for telling computers what to do! I am currently a a third year Computer Science student attending UC Riverside, set to graduate in 2021. As of now, I am not fully committed to any field, though I am currently interested in front end web development.
-                <br> <br>
+                    <h1 class="name">Alex Cui</h1>
 
-                For this summer, I have been working in research at UCR, which mainly involves redesigning and reorganizing a company's dashboard using AngularJS and Typescript.
-                    
-                But When I'm not coding, you can find me listening to music, watching movies, or shopping at my local malls and thrifts!</p>
+                    <p>Software engineer</p>
 
+                    <div>
 
-            </div>
+                        <hr class="my-4" id="divider">
+                        
+                        <div class="links">
 
-            <div style="height:20%; font-size:1.8vh; margin-top:30px">
+                            <a class="link btn" href="https://github.com/alex-cui" target="_blank"><img src="media/github.png" style="width:30px;border-radius:50%"></a>
 
-<!--                <hr class="my-4" id="divider">-->
+                            <a class="link left btn" href="https://linkedin.com/in/alex-cui" target="_blank"><img src="media/linked.png" style="height:30px;border-radius:50%"></a>
 
-                <div style="text-align:center"> 
+                            <a class="link left btn" href="media/resume.pdf" target="_blank"><img src="media/resume.png" style="height:30px;border-radius:50%"></a>
 
-<!--                    <p>Want to get in touch? Feel free to contact me here!</p>    -->
+                            <a class="link left btn" href="mailto:alexcui1@yahoo.com" target="_blank"><img src="media/email.png" style="height:30px;border-radius:50%"></a>
 
-                    <div class="links">
+                        </div>
 
-                        <a class="link btn" href="https://github.com/alex-cui" role="button" target="_blank"><img src="media/github.png" style="height:40px;border-radius:50%"></a>
-
-                        <a class="link btn" href="https://linkedin.com/in/alex-cui" role="button" target="_blank"><img src="media/linked.png" style="height:40px;border-radius:50%"></a>
-
-                        <a class="link btn" href="media/resume.pdf" role="button" target="_blank"><img src="media/resume.png" style="height:40px;border-radius:50%"></a>
-
-                        <a class="link btn" href="mailto:alexcui1@yahoo.com" role="button" target="_blank"><img src="media/email.png" style="height:40px;border-radius:50%"></a>
 
                     </div>
 
-
                 </div>
-
+                
             </div>
 
-        </div>    
+        </div>   
         
+        <div id="about" class="jumbotron fade-in">
+            
+            <h1 class="lead">About</h1>
+            
+<!--            <h2>Who am I</h2>-->
+            
+            <p class="description">Hi I'm Alex and I have a passion for telling computers what to do! I am currently a a third year Computer Science student attending UC Riverside, set to graduate in 2021. As of now, I am not fully committed to any field, though I am currently interested in front end web development.</p>
+            <br> <br>
+
+            <h3 class="update">What I've been up to...</h3>
+
+            <p class="description">For this summer, I've mainly been working in research at UCR, which involves redesigning and reorganizing a company's dashboard using AngularJS and Typescript.
+
+            But when I'm not coding, you can find me listening to music, watching movies, or shopping at my local malls and thrifts!</p>
+
+        </div>   
+                
         <div id="projects" class="jumbotron fade-in">
             
-            <h1 class="lead" style="margin-bottom:30px">Projects</h1>
+            <h1 class="lead">Projects</h1>
 
             <div class="project-div">
                                 
                 <img class="zoom" style="position:relative; float:left; margin-right:15px" src="media/project1.jpg" width="200px" height="120px">
                 
-                <a href="https://github.com/alex-cui/piano-tiles" target="_blank"><h4 class="project-title">Piano Tiles (2019)</h4></a>
+                <a href="https://github.com/alex-cui/piano-tiles" target="_blank"><h4><span class="project-title">Piano Tiles</span> (2019)</h4></a>
                 
                 <p>Created a simplified version of the popular game "Piano Tiles" on a breadboard utilizing Atmel Studios 7 and an ATMega1284.</p>
                 
@@ -117,7 +125,7 @@
                           
                 <img class="zoom" style="position:relative; float:right" src="media/project2.png" width="200px" height="120px">
                 
-                <a href="https://github.com/alex-cui/redditbot" target="_blank"><h4 class="project-title">Reddit Bot (2018)</h4></a>
+                <a href="https://github.com/alex-cui/redditbot" target="_blank"><h4><span class="project-title">Reddit Bot</span> (2018)</h4></a>
 
                 <p>Built a bot that utilizes Reddit's API to send responses to users based on the content of their comments. Created at Cutie Hack 2018.</p>
                 
@@ -128,8 +136,7 @@
                                 
                 <img class="zoom" style="position:relative; float:left; margin-right:15px" src="media/project3.png" width="200px" height="120px">
                 
-                
-                <a href="https://github.com/alex-cui/rshell" target="_blank"><h4 class="project-title">RShell (2018)</h4></a>
+                <a href="https://github.com/alex-cui/rshell" target="_blank"><h4><span class="project-title">RShell</span> (2018)</h4></a>
 
                 <p>Replicated Bash commands and connectors using C++ and Linux system calls.</p>
                 
@@ -141,24 +148,12 @@
 
             <h1 class="lead">Misc.</h1>
 
-<!--
-            <p>Selling my clothes here:
-            
-                <a href="https://www.depop.com/thrifteas/" target="_blank">@depop, </a>
-                
-                <a href="https://www.grailed.com/haveagoodtime" target="_blank">@grailed</a>
-                
-            </p>
--->
+            <p>Some songs I like to listen to while coding: </p>
 
-                <p>Some songs I like to listen to while coding: </p>
+            <iframe src="https://open.spotify.com/embed/playlist/5Gxc2T1gpt4wEYfESg45wj" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"
+            style="text-align:center"></iframe>
                 
-                <iframe src="https://open.spotify.com/embed/playlist/5Gxc2T1gpt4wEYfESg45wj" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"
-                style="text-align:center"></iframe>
-                
-            
         </div>    
-        
         
         <script type="text/javascript" src="index.js"></script>
 

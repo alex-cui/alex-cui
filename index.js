@@ -14,18 +14,18 @@ var LeafScene = function(el) {
     this.timer = 0;
 
     this._resetLeaf = function(leaf) {
-          // place leaf towards the top left
-          leaf.x = this.width * 2 - Math.random()*this.width*1.75;
-          leaf.y = -10;
-          leaf.z = Math.random()*200;
-          if (leaf.x > this.width) {
-            leaf.x = this.width + 10;
-            leaf.y = Math.random()*this.height/2;
-          }
-        
+
+      // place leaf towards the top left
+      leaf.x = this.width * 2 - Math.random()*this.width*1.75;
+      leaf.y = -10;
+      leaf.z = Math.random()*200;
+      if (leaf.x > this.width) {
+        leaf.x = this.width + 10;
+        leaf.y = Math.random()*this.height/2;
+      }
       // at the start, the leaf can be anywhere
       if (this.timer == 0) {
-        leaf.y = this.height;
+        leaf.y = Math.random()*this.height;
       }
 
       // Choose axis of rotation.
@@ -75,7 +75,7 @@ var LeafScene = function(el) {
   }
 
 LeafScene.prototype.init = function() {
-    for (var i = 0; i < this.options.numLeaves; i++) {
+    for (var i = 0; i < this.options.numLeaves && init; i++) {
       var leaf = {
         el: document.createElement('div'),
         x: 0,
@@ -116,30 +116,25 @@ LeafScene.prototype.init = function() {
       self.width = self.viewport.offsetWidth;
       self.height = self.viewport.offsetHeight;
     };
-    
-            if (this.timer == 1) {
-            return;
-        }
 }
 
 LeafScene.prototype.render = function() {
-    for (var i = 0; i < this.leaves.length; i++) {
+    for (var i = 0; i < this.leaves.length && init; i++) {
+    
       this._updateLeaf(this.leaves[i]);
     }
 
     this.timer++;
-    
-    requestAnimationFrame(this.render.bind(this));
-    
-        if (this.timer == 1) {
-            return;
-        }
 
+    requestAnimationFrame(this.render.bind(this));
 }
 
 // start up leaf scene
 var leafContainer = document.querySelector('.falling-leaves'),
   leaves = new LeafScene(leafContainer);
+
+    leaves.init();
+    leaves.render();
 
 
 function toggle() {
