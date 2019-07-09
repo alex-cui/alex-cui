@@ -14,89 +14,70 @@
         <link rel="shortcut icon" type="image/png" href="media/favicon.jpg"/>
 
         <!-- Bootstrap CSS & Javascript -->
-        <link rel="stylesheet" href="dependencies/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css"/>
+        <link href="dependencies/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css" rel="stylesheet"/>
         
-        <link rel="stylesheet" href="dependencies/bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js"/>
+        <link href="dependencies/bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js" rel="stylesheet"/>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
         
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        
+        
         <!--CSS-->
-        <link rel="stylesheet" href="index.css" type="text/css" />
+        <link rel="stylesheet" href="index.css" type="text/css">
         
         <link rel="stylesheet" href="dependencies/w3.css">
         
     </head>
 
-    <body class="falling-leaves">
-        
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-        
-        
-        <div class="navigation fade-in">
+    <body data-spy="scroll" data-target="#nav" data-offset="100">
 
-            <br>
-
-            <a href="#" >home</a>
-
-            <br><br>
-
-            <a href="#" >projects</a>
-
-            <br><br>
-
-
-            <a href="#">misc.</a>
-
-        </div>
-        
-        <div class="jumbotron fade-in">
+        <nav class="navigation" id="nav">
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#misc">misc.</a>
+            </li>       
+          </ul>
+        </nav>
+           
+        <div id="home" class="jumbotron fade-in">
 
             <div>
 
-                <h1 class="lead">Hi I'm Alex!</h1>
+                <h1 class="greeting">Hi I'm Alex!</h1>
                 
                 <div>
                 
-                    <img class="me-pic view overlay zoom" onclick="toggle()" src="media/me.jpg">
-
-<!--
-                    <div class="navigation">
-                        
-                        <br>
-
-                        <a href="#" >home</a>
-                        
-                        <br><br>
-
-                        <a href="#" >projects</a>
-                        
-                        <br><br>
-
-
-                        <a href="#">misc.</a>
-
-                    </div>
--->
+                    <img class="me-pic view overlay" onclick="toggle()" src="media/me.jpg">
                     
                 </div>
 
-                <p class="description">and I have a passion for telling computers what to do! I am currently a a third year Computer Science student attending UC Riverside, set to graduate in 2021. As of now, I am not fully committed to any field, though I have a growing interest in web design and development.
-
+                <p class="description">and I have a passion for telling computers what to do! I am currently a a third year Computer Science student attending UC Riverside, set to graduate in 2021. As of now, I am not fully committed to any field, though I am currently interested in front end web development.
                 <br> <br>
 
-                These days, I'm studying for classes, creating projects, and working in research. But when I'm not coding, you can find me listening to music, watching movies, or shopping at my local malls and thrifts.</p>
+                For this summer, I have been working in research at UCR, which mainly involves redesigning and reorganizing a company's dashboard using AngularJS and Typescript.
+                    
+                But When I'm not coding, you can find me listening to music, watching movies, or shopping at my local malls and thrifts!</p>
 
 
             </div>
 
-            <div style="height:20%; font-size:1.8vh; margin-top:10px">
+            <div style="height:20%; font-size:1.8vh; margin-top:30px">
 
-                <hr class="my-4" style="border-color:red">
+<!--                <hr class="my-4" id="divider">-->
 
                 <div style="text-align:center"> 
 
-                    <p>Want to get in touch? Feel free to contact me here!</p>    
+<!--                    <p>Want to get in touch? Feel free to contact me here!</p>    -->
 
                     <div class="links">
 
@@ -116,6 +97,68 @@
             </div>
 
         </div>    
+        
+        <div id="projects" class="jumbotron fade-in">
+            
+            <h1 class="lead" style="margin-bottom:30px">Projects</h1>
+
+            <div class="project-div">
+                                
+                <img class="zoom" style="position:relative; float:left; margin-right:15px" src="media/project1.jpg" width="200px" height="120px">
+                
+                <a href="https://github.com/alex-cui/piano-tiles" target="_blank"><h4 class="project-title">Piano Tiles (2019)</h4></a>
+                
+                <p>Created a simplified version of the popular game "Piano Tiles" on a breadboard utilizing Atmel Studios 7 and an ATMega1284.</p>
+                
+            </div>
+            
+            
+            <div class="project-div">
+                          
+                <img class="zoom" style="position:relative; float:right" src="media/project2.png" width="200px" height="120px">
+                
+                <a href="https://github.com/alex-cui/redditbot" target="_blank"><h4 class="project-title">Reddit Bot (2018)</h4></a>
+
+                <p>Built a bot that utilizes Reddit's API to send responses to users based on the content of their comments. Created at Cutie Hack 2018.</p>
+                
+                
+            </div>
+                
+            <div class="project-div">
+                                
+                <img class="zoom" style="position:relative; float:left; margin-right:15px" src="media/project3.png" width="200px" height="120px">
+                
+                
+                <a href="https://github.com/alex-cui/rshell" target="_blank"><h4 class="project-title">RShell (2018)</h4></a>
+
+                <p>Replicated Bash commands and connectors using C++ and Linux system calls.</p>
+                
+            </div>
+                
+        </div>    
+        
+        <div id="misc" class="jumbotron fade-in">
+
+            <h1 class="lead">Misc.</h1>
+
+<!--
+            <p>Selling my clothes here:
+            
+                <a href="https://www.depop.com/thrifteas/" target="_blank">@depop, </a>
+                
+                <a href="https://www.grailed.com/haveagoodtime" target="_blank">@grailed</a>
+                
+            </p>
+-->
+
+                <p>Some songs I like to listen to while coding: </p>
+                
+                <iframe src="https://open.spotify.com/embed/playlist/5Gxc2T1gpt4wEYfESg45wj" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"
+                style="text-align:center"></iframe>
+                
+            
+        </div>    
+        
         
         <script type="text/javascript" src="index.js"></script>
 

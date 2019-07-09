@@ -146,5 +146,3 @@ function toggle() {
     leaves.init();
     leaves.render();
 }
-
-
