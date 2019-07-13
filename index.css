@@ -1,6 +1,6 @@
 @font-face {
-  font-family: blond;
-  src: url("dependencies/Blonde.ttf");
+  font-family: jost;
+  src: url("dependencies/Jost/TrueType/Jost-500-Medium.ttf");
 }
 
 html {
@@ -9,14 +9,14 @@ html {
 
 body {
     position:relative;
-    font-family:"futura";
+    font-family:"jost";
     font-style:italic;
 }
 
 #home {
     height:100vh;
     
-    font-family:"futura";
+    font-family:"jost";
     font-style:italic;
     
     background-color:transparent;
@@ -43,8 +43,8 @@ body {
 }
 
 .jumbotron {
-    height:100vh;
-    font-family:"futura";
+    height:100vh; 
+    font-family:jost;
     font-style:italic;
     background-color:transparent;
     position:relative;
@@ -85,13 +85,13 @@ body {
 }
 
 .name {
-    font-family:"futura";
+    font-family:"jost";
     font-size:50px;
 }
 
 
 .navigation {    
-    font-family:"futura";
+    font-family:"jost";
     font-style:italic;
     
     position:fixed;
@@ -131,7 +131,7 @@ body {
 }
 
 .misc-text {
-    font-family: 'futura';
+    font-family: 'jost';
     font-style: italic;
     font-size:18px;
 }
