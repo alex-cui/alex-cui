@@ -15,7 +15,7 @@ body {
 
 #home {
     height:100vh;
-     
+    
     font-family:"futura";
     font-style:italic;
     
@@ -30,14 +30,6 @@ body {
 
 #misc {
     text-align:center;
-    margin-bottom:0;
-}
-
-.yellow-underline {
-    text-align:center;
-    text-decoration: underline;
-    font-weight: bold;
-    text-decoration-color: #FFCC01;
 }
 
 .nav > li > a {
@@ -108,6 +100,12 @@ body {
     top:10%;
 }
 
+.update {
+    text-align:center;
+    text-decoration: underline;
+    text-decoration-color: #FFCC01;
+}
+
 
 .lead {
     text-align:center;
@@ -127,7 +125,6 @@ body {
 
 .project-title {
     font-style: italic;
-    
     text-decoration: underline;
     text-decoration-color: #FFCC01;
     font-size:20px;
