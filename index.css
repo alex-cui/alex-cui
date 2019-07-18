@@ -30,6 +30,8 @@ body {
 
 #misc {
     text-align:center;
+    padding-bottom:0;
+    margin-bottom:0;
 }
 
 .nav > li > a {
@@ -50,7 +52,6 @@ body {
     position:relative;
     width:35%;
     left:32.5%;
-    padding:0;
     padding-top:2%;
 /*    border:1px solid black;*/
 }
@@ -58,6 +59,29 @@ body {
 .link {
     overflow:auto;
 }
+
+.ul {
+    list-style:none;
+    width:100%;
+    font-size:0;
+    padding-left:0;
+}
+
+.li {
+    display:inline-block;
+    width:50%;
+    height:4px;
+}
+
+.li:nth-child(1) {
+    background:#FFCC01;
+}
+
+.li:nth-child(2) {
+    background:#0055FE;
+}
+
+
 
 .left {
 }
@@ -79,9 +103,11 @@ body {
     cursor:pointer;
 }
 
-.divider {
+.underline {
+/*
     width:250px;
     border:1px solid #FFCC01
+*/
 }
 
 .name {
@@ -101,6 +127,7 @@ body {
 }
 
 .update {
+    font-family:"jost";
     text-align:center;
     text-decoration: underline;
     text-decoration-color: #FFCC01;
