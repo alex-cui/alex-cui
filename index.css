@@ -15,14 +15,13 @@ body {
 
 #home {
     height:100vh;
-    
     font-family:"jost";
     font-style:italic;
-    
     background-color:transparent;
     position:relative;
-    min-width:40%;
-    left:30%;
+/*    min-width:40%;*/
+    width:50vh;
+    left:55vh;
     padding-top:30vh;
     margin-bottom:200px;
 }
