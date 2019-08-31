@@ -48,7 +48,8 @@ body {
     background-color:transparent;
     position:relative;
     width:35%;
-    left:32.5%;
+/*    left:32.5%;*/
+    left:80vh;
     padding-top:2%;
 /*    border:1px solid black;*/
 }
