@@ -14,21 +14,55 @@ body {
 }
 
 #home {
-    height:100vh;
-    font-family:"jost";
-    font-style:italic;
-    background-color:transparent;
     position:relative;
-/*    min-width:40%;*/
+    height:100vh;
     left:30%;
     padding-top:30vh;
-    margin-bottom:200px;
+    font-family:"jost";
 }
 
 #misc {
     text-align:center;
     padding-bottom:0;
     margin-bottom:0;
+}
+
+.jumbotron {
+    position:relative;
+    height:100vh; 
+    left:32.5%;
+    width:35%;
+    font-family:jost;
+    background-color:transparent;
+    padding-top:3%;
+}
+
+.lead {
+    text-align:center;
+    font-weight:bold;
+    padding-top:5vh;
+    font-size:40px;
+    margin-bottom:25px;
+}
+
+.description {
+    font-size:20px;
+}
+
+.zoom {
+  transition: transform .2s; /* Animation */
+}
+
+.zoom:hover {
+  transform: scale(1.8);
+}
+
+/*navigation bar*/
+.navigation {    
+    font-family:"jost";
+    position:fixed;
+    left:18%;
+    top:10%;
 }
 
 .nav > li > a {
@@ -41,21 +75,30 @@ body {
     text-decoration: underline;
 }
 
-.jumbotron {
-    height:100vh; 
-    font-family:jost;
-    font-style:italic;
-    background-color:transparent;
+/*home tab*/
+.home-pic {    
     position:relative;
-    width:35%;
-/*    left:32.5%;*/
-    left:55vh;
-    padding-top:2%;
-/*    border:1px solid black;*/
+    float:left;
+    width:28vh;
+    border-radius:50%;
+    transition: transform .2s;   
+    cursor:pointer;
 }
 
-.link {
-    overflow:auto;
+.home-info {
+    font-style:normal;
+    float:left;
+    padding-top:15px;
+    margin-left:50px;
+}
+
+.name {
+    font-family:"jost";
+    font-size:50px;
+}
+
+.me-pic:hover {
+  transform: scale(1.2);
 }
 
 .ul {
@@ -79,46 +122,7 @@ body {
     background:#0055FE;
 }
 
-.home-text {
-    font-style:normal;
-    position:relative;
-    float:left;
-    padding-top:1%;
-    margin-left:3%;
-}
-
-.me-pic {    
-    position:relative;
-    float:left;
-    width:28vh;
-    border-radius:50%;
-    transition: transform .2s;   
-    cursor:pointer;
-}
-
-.underline {
-/*
-    width:250px;
-    border:1px solid #FFCC01
-*/
-}
-
-.name {
-    font-family:"jost";
-    font-size:50px;
-}
-
-
-.navigation {    
-    font-family:"jost";
-    font-style:italic;
-    
-    position:fixed;
-    float:left;
-    left:18%;
-    top:10%;
-}
-
+/*about tab*/
 .update {
     font-family:"jost";
     text-align:center;
@@ -126,30 +130,18 @@ body {
     text-decoration-color: #FFCC01;
 }
 
-
-.lead {
-    text-align:center;
-    font-weight:bold;
-    padding-top:5vh;
-    font-size:40px;
-    margin-bottom:30px;
-}
-
-.description {
-    font-size:20px;
-}
-
+/*project tab*/
 .project-div {
     height:25%;
 }
 
 .project-title {
-    font-style: italic;
     text-decoration: underline;
     text-decoration-color: #FFCC01;
     font-size:20px;
 }
 
+/*misc tab*/
 .misc-text {
     font-family: 'jost';
     font-style: italic;
@@ -157,20 +149,7 @@ body {
 }
 
 
-
-
-.me-pic:hover {
-  transform: scale(1.2);
-}
-
-.zoom {
-  transition: transform .2s; /* Animation */
-}
-
-.zoom:hover {
-  transform: scale(1.8);
-}
-
+/*js*/
 .leaf-scene {
     position: absolute;
     top: 0;

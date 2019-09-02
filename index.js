@@ -4,29 +4,15 @@ var LeafScene = function(el) {
     this.viewport = el;
     this.world = document.createElement('div');
     this.leaves = [];
-
-    this.options = {numLeaves: 20};
-
+    this.options = {numLeaves: 30};
     this.width = this.viewport.offsetWidth;
     this.height = this.viewport.offsetHeight;
 
-    // animation helper
-    this.timer = 0;
-
     this._resetLeaf = function(leaf) {
-
       // place leaf towards the top left
-      leaf.x = this.width * 2 - Math.random()*this.width*1.75;
+      leaf.x = this.width * 2 - Math.random()*this.width*2;
       leaf.y = -10;
       leaf.z = Math.random()*200;
-      if (leaf.x > this.width) {
-        leaf.x = this.width + 10;
-        leaf.y = Math.random()*this.height/2;
-      }
-      // at the start, the leaf can be anywhere
-      if (this.timer == 0) {
-        leaf.y = Math.random()*this.height;
-      }
 
       // Choose axis of rotation.
       // If axis is not X, chose a random static x-rotation for greater variability
@@ -45,15 +31,12 @@ var LeafScene = function(el) {
       }
 
       // random speed
-      leaf.xSpeedVariation = Math.random() * 0.8 - 0.4;
-      leaf.ySpeed = Math.random() + 1.5;
+      leaf.ySpeed = Math.random() + 10;
 
       return leaf;
     }
 
     this._updateLeaf = function(leaf) {
-      var xSpeed = leaf.xSpeedVariation;
-      leaf.x -= xSpeed;
       leaf.y += leaf.ySpeed;
       leaf.rotation.value += leaf.rotation.speed;
 
@@ -64,18 +47,13 @@ var LeafScene = function(el) {
       leaf.el.style.webkitTransform = t;
       leaf.el.style.MozTransform = t;
       leaf.el.style.oTransform = t;
-      leaf.el.style.transform = t;
-
-      // reset if out of view
-      if (leaf.x < -10 || leaf.y > this.height + 10) {
-        this._resetLeaf(leaf);
-      }
+      leaf.el.style.transform = t;7
     }
 
   }
 
 LeafScene.prototype.init = function() {
-    for (var i = 0; i < this.options.numLeaves && init; i++) {
+    for (var i = 0; i < this.options.numLeaves; i++) {
       var leaf = {
         el: document.createElement('div'),
         x: 0,
@@ -119,13 +97,9 @@ LeafScene.prototype.init = function() {
 }
 
 LeafScene.prototype.render = function() {
-    for (var i = 0; i < this.leaves.length && init; i++) {
-    
+    for (var i = 0; i < this.leaves.length; i++) {
       this._updateLeaf(this.leaves[i]);
     }
-
-    this.timer++;
-
     requestAnimationFrame(this.render.bind(this));
 }
 
@@ -133,11 +107,8 @@ LeafScene.prototype.render = function() {
 var leafContainer = document.querySelector('.falling-leaves'),
   leaves = new LeafScene(leafContainer);
 
-    leaves.init();
-    leaves.render();
-
+leaves.render();
 
 function toggle() {
     leaves.init();
-    leaves.render();
 }
