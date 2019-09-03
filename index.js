@@ -65,7 +65,6 @@ LeafScene.prototype.init = function() {
           speed: 0,
           x: 0
         },
-        xSpeedVariation: 0,
         ySpeed: 0,
         path: {
           type: 1,

@@ -89,8 +89,8 @@ body {
 .home-info {
     font-style:normal;
     float:left;
-    padding-top:3%;
-    margin-left:5%;
+    padding-top:5%;
+    margin-left:10%;
 }
 
 .name {
@@ -98,7 +98,7 @@ body {
     font-size:50px;
 }
 
-.me-pic:hover {
+#me-pic:hover {
   transform: scale(1.2);
 }
 
@@ -168,7 +168,7 @@ body {
   left: 0;
   width: 20px;
   height: 20px;
-  background: url(media/leaf.png) no-repeat;
+  background: url(img/leaf.png) no-repeat;
   background-size: 100%;
   transform-style: preserve-3d;
   backface-visibility: visible;
