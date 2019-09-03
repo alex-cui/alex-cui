@@ -86,7 +86,6 @@ body {
     position:relative;
     height:100vh;    
     left:30%;
-/*    left:50vh;*/
     width:40%;
     padding-top:30vh;
     font-family:"jost";
@@ -97,6 +96,7 @@ body {
     float:left;
 /*    width:250px;*/
     width:45%;
+    margin-right:10%;
     border-radius:50%;
     transition: transform .2s;   
     cursor:pointer;
@@ -106,8 +106,7 @@ body {
     width:45%;
     font-style:normal;
     float:left;
-    padding-top:7%;
-    margin-left:10%;
+    padding-top:5%;
 }
 
 .name {
