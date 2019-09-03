@@ -16,8 +16,8 @@ body {
 #home {
     position:relative;
     height:100vh;
-/*    left:30%;*/
-    left:50vh;
+    left:30%;
+/*    left:50vh;*/
     width:40%;
     padding-top:30vh;
     font-family:"jost";
@@ -82,15 +82,20 @@ body {
     position:relative;
     float:left;
     width:250px;
+/*
+    min-width:40%;
+    width:40%;
+*/
     border-radius:50%;
     transition: transform .2s;   
     cursor:pointer;
 }
 
 .home-info {
+    width:45%;
     font-style:normal;
     float:left;
-    padding-top:5%;
+    padding-top:3%;
     margin-left:10%;
 }
 
