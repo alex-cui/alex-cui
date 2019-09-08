@@ -30,8 +30,8 @@ var LeafScene = function(el) {
         leaf.rotation.speed = Math.random()*3;
       }
 
-      // random speed
-      leaf.ySpeed = Math.random() + 10;
+      // changes speed of leaves falling down
+      leaf.ySpeed = Math.random() + 7;
 
       return leaf;
     }
