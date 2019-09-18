@@ -27,6 +27,11 @@ body {
 */
 }
 
+#projects {
+    left:15%;
+    width:70%;
+}
+
 #misc {
     text-align:center;
     padding-bottom:0;
@@ -36,8 +41,8 @@ body {
 .jumbotron {
     position:relative;
     height:100vh; 
-    left:30%;
-    width:40%;
+    left:25%;
+    width:50%;
     font-family:jost;
     background-color:transparent;
     padding-top:3%;
@@ -94,7 +99,6 @@ body {
 .home-pic {    
     position:relative;
     float:left;
-/*    width:250px;*/
     width:30vh;
     margin-right:7.5%;
     margin-left:7.5%;
@@ -108,7 +112,7 @@ body {
     width:45%;
     font-style:normal;
     float:left;
-    padding-top:5vh;
+    padding-top:3.5vh;
 }
 
 .name {
@@ -151,13 +155,23 @@ body {
 
 /*project tab*/
 .project-div {
-    height:25%;
+/*    height:25%;*/
+    width:20%;
+    margin:20px;
+    
 }
 
 .project-title {
     text-decoration: underline;
     text-decoration-color: #FFCC01;
     font-size:20px;
+    text-align:center;
+}
+
+.project-image {
+    width:200px;
+    height:120px;
+    margin-bottom:20px;
 }
 
 /*misc tab*/

@@ -65,13 +65,13 @@
                     <li class="li"></li>
                 </ul>
                 
-                <a class="link btn" href="https://github.com/alex-cui" target="_blank"><img src="img/github.png" style="width:30px;border-radius:50%; margin-left:-10px"></a>
+                <a class="link btn" href="https://github.com/alex-cui" target="_blank"><img src="img/github.png" style="width:35px;border-radius:50%; margin-left:-10px"></a>
 
-                <a class="link btn" href="https://linkedin.com/in/alex-cui" target="_blank"><img src="img/linked.png" style="height:30px;border-radius:50%"></a>
+                <a class="link btn" href="https://linkedin.com/in/alex-cui" target="_blank"><img src="img/linked.png" style="height:35px;border-radius:50%"></a>
 
-                <a class="link btn" href="media/resume.pdf" target="_blank"><img src="img/resume.png" style="height:30px;border-radius:50%"></a>
+                <a class="link btn" href="media/resume.pdf" target="_blank"><img src="img/resume.png" style="height:35px;border-radius:50%"></a>
 
-                <a class="link left btn" href="mailto:alexcui1@yahoo.com" target="_blank"><img src="img/email.png" style="height:30px;border-radius:50%"></a>
+                <a class="link left btn" href="mailto:alexcui1@yahoo.com" target="_blank"><img src="img/email.png" style="height:35px;border-radius:50%"></a>
 
             </div>
                 
@@ -82,7 +82,11 @@
             
             <h1 class="lead">About</h1>
             
-            <p class="description">Hi I'm Alex and I have a passion for telling computers what to do! I am currently a a third year Computer Science student attending UC Riverside, set to graduate in 2021. As of now, I am not fully committed to any field, though I have a growing interest towards front end web development.</p>
+            <img src="img/ucr.jpg" height="80px" style="float:right; border-radius:15%; margin-left:15px">
+
+            <p class="description">Hi I'm Alex and I have a passion for telling computers what to do! I am currently a a third year Computer Science student attending UC Riverside, set to graduate in 2021. As of now, I am not committed to any field, though I have a growing interest towards web development.</p>
+            
+                
             
 <!--            When I'm not coding, you can find me listening to music, watching movies, or shopping at my local malls and thrifts!-->
             
@@ -90,9 +94,11 @@
 
             <h3 class="update">What I've been up to...</h3>
 
-            <p class="description">For this summer, I've been working as a research assistant at UCR, which mainly involves redesigning and reorganizing a company's dashboard using Angular and Typescript.
+            <img src="img/smartbot360.png" height="100px" style="float:left; background-color:black; border-radius:15%; padding:10px; margin-right:25px">
 
-            I am also actively looking for an internship for the summer of 2020. So if you'd like to chat, feel free to contact me!
+            <p class="description">For this summer, I've been working as a research assistant in a professor's company— <a href="https://smartbot360.com" style="color:#0055FE">Smartbot360</a>. This mainly involves redesigning and reorganizing the company dashboard, and creating SQL queries in the backend.
+
+            I am also actively searching for an internship for the summer of 2020. If you'd like to chat, feel free to contact me!
             </p>
 
         </div>   
@@ -100,40 +106,57 @@
         <div id="projects" class="jumbotron fade-in">
             
             <h1 class="lead">Projects</h1>
-
-            <div class="project-div">
-                                
-                <img class="zoom" style="position:relative; float:left; margin-right:15px" src="img/project1.jpg" width="200px" height="120px">
-                
-                <a href="https://github.com/alex-cui/piano-tiles" target="_blank" class="project-title"><h4>Piano Tiles</h4></a>
-                
-                <p>Created a simplified version of the popular game "Piano Tiles" on a breadboard utilizing Atmel Studios 7 and an ATMega1284.</p>
-                
-            </div>
             
-            
-            <div class="project-div">
-                          
-                <img class="zoom" style="position:relative; float:right" src="img/project2.png" width="200px" height="120px">
+            <div>
                 
-                <a href="https://github.com/alex-cui/redditbot" target="_blank" class="project-title"><h4>Reddit Bot</h4></a>
+                <div class="project-div" style="float:left">
 
-                <p>Built a bot that utilizes Reddit's API to send responses to users based on the content of their comments. Created at Cutie Hack 2018.</p>
-                
-                
-            </div>
-                
-            <div class="project-div">
-                                
-                <img class="zoom" style="position:relative; float:left; margin-right:15px" src="img/project3.png" width="200px" height="120px">
-                
-                <a href="https://github.com/alex-cui/rshell" target="_blank" class="project-title"><h4> RShell</h4></a>
+                    <a href="https://github.com/alex-cui/piano-tiles" target="_blank" class="project-title"><h4>Piano Tiles</h4></a>
+                    
+                    <img class="zoom project-image" src="img/project1.jpg">
 
-                <p>Replicated Bash commands and connectors using C++ and Linux system calls.</p>
-                
+                    <p>Developed a simplified version of the popular game "Piano Tiles" on a breadboard utilizing Atmel Studios 7 and an ATMega1284. Includes features such as a system reset option, a score keeper, and a sound buzzer.</p>
+
+                </div>            
+
+                <div class="project-div" style="float:left">
+
+                    <a href="https://github.com/alex-cui/redditbot" target="_blank" class="project-title"><h4>Reddit Bot</h4></a>
+                    
+                    <img class="zoom project-image" src="img/project2.png">
+
+                    <p>Built a bot that utilizes Reddit's API to send responses to users based on the content of their comments. Created with a team at Cutie Hack 2018.</p>
+
+
+                </div>
+
+                <div class="project-div" style="float:left">
+
+                    <a href="https://github.com/alex-cui/rshell" target="_blank" class="project-title"><h4> RShell</h4></a>
+
+                    <img class="zoom project-image" src="img/project3.png">
+                    
+                    <p>Replicated basic Bash commands, connectors, and flags using C++ and Linux system calls.</p>
+
+                </div>
+
+                <div class="project-div" style="float:left">
+
+                    <a href="https://github.com/alex-cui/genius-searcher" target="_blank" class="project-title"><h4>Genius Searcher</h4></a>
+
+                    <img class="zoom project-image" src="img/project4.jpg">
+
+                    <p>Created a Google Chrome extension that allows you to search up a musical artist, or song lyrics, by right clicking a phrase or searching in the popup menu. Specifically retrieves results from Genius.com</p>
+
+                </div>
+
             </div>
                 
         </div>    
+                
+            </div>
+            
+        </div>
         
         <div id="misc" class="jumbotron fade-in">
 
