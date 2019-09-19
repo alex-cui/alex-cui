@@ -155,22 +155,25 @@ body {
 
 /*project tab*/
 .project-div {
-    width:20%;
-    margin-left:2.5%;
-    margin-right:2.5%;
-    
+    width:23.5%;
+    padding:1%;
+    margin-left:2%;
+    text-align:center;
+/*
+    border:1px solid black;
+    border-radius: 3%;
+*/
 }
 
 .project-title {
     text-decoration: underline;
     text-decoration-color: #FFCC01;
     font-size:20px;
-    text-align:center;
+/*    text-align:center;*/
 }
 
-.project-image {
-    width:200px;
-    height:120px;
+.project-image {   
+    width:100%;
     margin-bottom:20px;
     text-align:center
 }
