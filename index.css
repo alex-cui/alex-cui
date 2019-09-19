@@ -112,7 +112,7 @@ body {
     width:45%;
     font-style:normal;
     float:left;
-    padding-top:3.5vh;
+    padding-top:5vh;
 }
 
 .name {
@@ -155,9 +155,9 @@ body {
 
 /*project tab*/
 .project-div {
-/*    height:25%;*/
     width:20%;
-    margin:20px;
+    margin-left:2.5%;
+    margin-right:2.5%;
     
 }
 
@@ -172,6 +172,7 @@ body {
     width:200px;
     height:120px;
     margin-bottom:20px;
+    text-align:center
 }
 
 /*misc tab*/
