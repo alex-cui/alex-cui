@@ -14,6 +14,13 @@ body {
     position:relative;
 }
 
+.background-color {
+    position:0;
+    height:100%;
+    width:100%;
+    background-color:#FDAE9A;
+}
+
 .border {
     position:fixed;
     width:100%;
