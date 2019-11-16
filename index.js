@@ -111,3 +111,46 @@ leaves.render();
 function toggle() {
     leaves.init();
 }
+
+var p1 = false;
+var p2 = false;
+var p3 = false;
+var p4 = false;
+
+function toggleZoom(flag) {
+    var element = document.getElementById(flag);
+    
+    console.log(flag);
+    if (flag == "p1") {
+        if (p1) 
+            element.classList.remove("zoomIn");
+        else 
+            element.classList.add("zoomIn");
+        p1 = !p1;
+    } 
+    else if (flag == "p2") {
+        if (p2) 
+            element.classList.remove("zoomIn");
+        else 
+            element.classList.add("zoomIn");
+        p2 = !p2;
+    } 
+    else if (flag == "p3") {
+        if (p3) 
+            element.classList.remove("zoomIn");
+        else 
+            element.classList.add("zoomIn");
+        p3 = !p3;
+    } 
+    else if (flag == "p4") {
+        if (p4) 
+            element.classList.remove("zoomIn");
+        else 
+            element.classList.add("zoomIn");
+        p4 = !p4;
+    } 
+    
+} 
+
+
+
