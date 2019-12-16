@@ -104,7 +104,7 @@ body {
 .home-pic {    
     position:relative;
     float:left;
-    width:28vh;
+    width:30vh;
     margin-right:7.5%;
     margin-left:7.5%;
 
@@ -117,7 +117,7 @@ body {
     width:45%;
     font-style:normal;
     float:left;
-    padding-top:2vh;
+    margin-top:3vh;
 }
 
 .name {
