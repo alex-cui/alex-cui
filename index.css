@@ -111,7 +111,7 @@ body {
 .home-pic {    
     position:relative;
     float:left;
-    width:30vh;
+    width:28vh;
     margin-right:7.5%;
     margin-left:7.5%;
 
@@ -124,7 +124,7 @@ body {
     width:45%;
     font-style:normal;
     float:left;
-    padding-top:3vh;
+    padding-top:2vh;
 }
 
 .name {
@@ -138,9 +138,6 @@ body {
 
 .bar {
     border:1.5px solid #E1D4C0
-/*    background-color#E1D4C0;*/
-/*    height:50px;*/
-/*    width:90%;*/
 }
 
 .ul {
@@ -189,7 +186,7 @@ body {
 }
 
 .project-image {   
-    width:100%;
+    width:200px;
     height:100px;
     margin-bottom:20px;
     text-align:center;
