@@ -34,8 +34,8 @@ body {
 
 #misc {
     text-align:center;
-    padding-bottom:0;
-    margin-bottom:0;
+/*    padding-bottom:0;*/
+/*    margin-bottom:0;*/
 }
 
 .jumbotron {
@@ -99,6 +99,7 @@ body {
     width:50%;
     padding-top:30vh;
     font-family:"jost";
+    opacity:0;
 }
 
 .home-pic {    
@@ -221,11 +222,15 @@ body {
 }
 
 .fade-in {
+/*  opacity:0;*/
+
+/*
   animation: fadeIn ease 1s;
   -webkit-animation: fadeIn ease 1s;
   -moz-animation: fadeIn ease 1s;
   -o-animation: fadeIn ease 1s;
   -ms-animation: fadeIn ease 1s;
+*/
 }
 
 @keyframes fadeIn{
