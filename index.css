@@ -79,6 +79,11 @@ body {
   transform: scale(2.5);
 }
 
+.zoomOut {
+  transition: transform .2s; /* Animation */
+  transform: scale(1);
+}
+
 /*home tab*/
 #home {
     position:relative;
@@ -149,8 +154,8 @@ body {
 .update {
     font-family:"jost";
     text-align:center;
-    text-decoration: underline;
-    text-decoration-color: #FFCC01;
+    font-weight: bold;
+    font-size: 25px;
 }
 
 /*project tab*/
@@ -162,15 +167,14 @@ body {
 }
 
 .project-title {
-    text-decoration: underline;
-    text-decoration-color: #FFCC01;
-    font-size:20px;
+    font-weight:bold;
+    font-size:22px;
 }
 
 .project-pic {   
     width:200px;
     height:100px;
-    margin-bottom:20px;
+    margin:10px 0 20px 0;
     text-align:center;
     cursor:pointer;
 }
