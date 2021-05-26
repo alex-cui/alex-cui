@@ -12,7 +12,19 @@ body {
     font-family:"jost";
     font-style:italic;
     position:relative;
+/*    background-color: #E2D4C0;*/
+/*    background-color: #F6E3D2;*/
 }
+
+/*
+#background {
+    position:fixed;
+    height:100vh;
+    width:190vh;
+    z-index:1;
+    border:50px solid #F6E3D2;
+}
+*/
 
 #projects {
     left:15%;
@@ -148,6 +160,7 @@ body {
 .li:nth-child(2) {
 /*    background:#0055FE;*/
     background:#0275d8;
+    
 }
 
 /*about tab*/
