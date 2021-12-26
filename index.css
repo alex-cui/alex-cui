@@ -12,7 +12,7 @@ body {
     font-family:"jost";
     font-style:italic;
     position:relative;
-/*    background-color: #E2D4C0;*/
+/*    background-color: #DCECC9;*/
 /*    background-color: #F6E3D2;*/
 }
 
@@ -22,7 +22,7 @@ body {
     height:100vh;
     width:190vh;
     z-index:1;
-    border:50px solid #F6E3D2;
+    border:50px solid #DCECC9;
 }
 */
 

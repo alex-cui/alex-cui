@@ -106,6 +106,7 @@ var leafContainer = document.querySelector('.falling-leaves'),
   leaves = new LeafScene(leafContainer);
 
 leaves.render();
+toggle();
 
 function toggle() {
     leaves.init();
